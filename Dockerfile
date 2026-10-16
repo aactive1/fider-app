@@ -1,4 +1,4 @@
-FROM golang:1.25-bookworm AS backend-builder
+FROM golang:1.26.9-bookworm AS backend-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
