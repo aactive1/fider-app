@@ -104,7 +104,7 @@ func NewTypeMapper(t reflect.Type) TypeMapper {
 			fieldType := field.Type
 			fieldKind := fieldType.Kind()
 
-			if fieldKind == reflect.Ptr {
+			if fieldKind == reflect.Pointer {
 				fieldType = field.Type.Elem()
 				mapper := NewTypeMapper(fieldType)
 				for _, f := range mapper.Fields {
